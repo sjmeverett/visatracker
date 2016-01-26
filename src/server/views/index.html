@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Visa processing time guestimator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background: #f5f5f5;
+      }
+
+      .tile {
+        padding: 10px;
+        background: #fff;
+        border-radius: 3px;
+        border: 1px solid #bbb;
+        margin: 10px;
+        float: left;
+        -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.27);
+        -moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.27);
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.27);
+      }
+
+      .tile-explain {
+        color: #666;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      .tile-content {
+        width: 300px;
+        height: 270px;
+        line-height: 270px;
+        text-align: center;
+        font-size: 100px;
+        color: #333;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tile">
+      <div class="tile-content">{{days}}</div>
+      <div class="tile-explain">days since submission</div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-content">{{value}}%</div>
+      <div class="tile-explain">are processed in this time</div>
+    </div>
+  </body>
+</html>
