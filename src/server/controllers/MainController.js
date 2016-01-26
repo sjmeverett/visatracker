@@ -16,6 +16,8 @@ export default class MainController {
     let date = request.params.to || new Date();
     let data = await this.calculator.calculate(date);
     data.date = moment(date).format('YYYY-MM-DD');
+    data.min = moment(config.submitted).format('YYYY-MM-DD');
+    data.max = moment(config.submitted).add(1, 'year').format('YYYY-MM-DD');
     response.render('index', data);
   }
 };
