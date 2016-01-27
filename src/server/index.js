@@ -1,6 +1,7 @@
 
 import express from 'express';
 import exphbs from 'express-handlebars';
+import path from 'path';
 import pkg from 'package.json';
 import rc from 'rc-yaml';
 import requireAll from 'require-all';
@@ -31,6 +32,7 @@ function createApp() {
   app.engine('html', exphbs({extname: '.html', layoutsDir: viewdir, partialsDir: viewdir}));
   app.set('view engine', 'html');
   app.set('views', viewdir);
+  app.use('/static', express.static(path.join(__dirname, '../../public')));
 }
 
 
